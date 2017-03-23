@@ -113,7 +113,7 @@ public class Recur
 	{
 		/************************/
 	  	/*                      */
-      	/* Your code goes here. */
+	  	/* Your code goes here. */
       	/*                      */
 		/************************/
 		return true;
@@ -149,54 +149,22 @@ public class Recur
 		}
 	}
 
-//	public static void printWithCommas(long num)
-//	{
-//		if (String.valueOf(num).length() <= 1)
-//		{
-//			System.out.print(num % 10);
-//		}
-//
-//		else
-//		{
-//			long i = num / 10;
-//			long j = num % 10;
-//
-//			int length = String.valueOf(i).length();
-//
-//			printWithCommas(i);
-//
-//			if (length % 3 == 0)
-//			{
-//				System.out.print(",");
-//			}
-//
-//			System.out.print(j);
-//		}
-//	}
-
 	public static void printWithCommas(long num)
 	{
-		String str = String.valueOf(num);
-
-		if (str.length() <= 1)
+		if (num < 1000)
 		{
-			System.out.print(str);
-			return;
+			System.out.print(num);
 		}
 
 		else
 		{
-			long j = Long.parseLong(str.substring(0, 1));
-			long i = Long.parseLong(str.substring(1));
-
-			if (str.length() % 3 == 0)
-			{
-				System.out.print(",");
-			}
-
-			System.out.print(j);
+			long i = num / 1000;
+			long j = num % 1000;
 
 			printWithCommas(i);
+
+			System.out.print("," + (j == 0l ? "000" : String.valueOf(j)));
 		}
+
 	}
 }
