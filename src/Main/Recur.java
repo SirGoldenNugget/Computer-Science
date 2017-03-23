@@ -18,13 +18,13 @@ public class Recur
 		{
 			System.out.println();
 			System.out.print("Make a selection" + "\n");
-			System.out.print("    (1) Count Up" + "\n");
-			System.out.print("    (2) Number of factors of two" + "\n");
-			System.out.print("    (3) Perfect power of three?" + "\n");
-			System.out.print("    (4) Reverse a number" + "\n");
-			System.out.print("    (5) Change to base 2" + "\n");
-			System.out.print("    (6) Print with Commas" + "\n");
-			System.out.print("    (0) To quit" + "\n");
+			System.out.print("(1) Count Up" + "\n");
+			System.out.print("(2) Number of factors of two" + "\n");
+			System.out.print("(3) Perfect power of three?" + "\n");
+			System.out.print("(4) Reverse a number" + "\n");
+			System.out.print("(5) Change to base 2" + "\n");
+			System.out.print("(6) Print with Commas" + "\n");
+			System.out.print("(0) To quit" + "\n");
 			response = Integer.parseInt(JOptionPane.showInputDialog("Enter a number:"));
 			System.out.println();
 
@@ -50,7 +50,7 @@ public class Recur
 				case 4:
 					number = Long.parseLong(JOptionPane.showInputDialog("What integer to reverse? "));
 					System.out.print("The number " + number + " reversed is ");
-					System.out.println(reverse(number));
+					reverse(number);
 					System.out.println();
 					break;
 				case 5:
@@ -82,58 +82,90 @@ public class Recur
 
 	public static void countUp(int num)
 	{
-		/************************/
-	      /*                    */
-      	/* Your code goes here. */
-      	/*                      */
-		/************************/
+		if (num < 1)
+		{
+			return;
+		}
+
+		else
+		{
+			int i = num - 1;
+			countUp(i);
+
+			System.out.print(num + "\n");
+		}
 	}
 
 	public static int twos(int num)
 	{
-		/************************/
-      	/*                      */
-      	/* Your code goes here. */
-      	/*                      */
-		/************************/
-		return -1;
+		if (num == 0 || num % 2 == 1)
+		{
+			return 0;
+		}
+
+		else
+		{
+			return twos(num / 2) + 1;
+		}
 	}
 
 	public static boolean powerOfThree(int num)
 	{
 		/************************/
-      	/*                      */
+	  	/*                      */
       	/* Your code goes here. */
       	/*                      */
 		/************************/
 		return true;
 	}
 
-	public static long reverse(long number)
+	public static void reverse(long num)
 	{
-		/************************/
-      	/*                      */
-      	/* Your code goes here. */
-      	/*                      */
-		/************************/
-		return -1;
+		if (num < 10)
+		{
+			System.out.print(num);
+			return;
+		}
+
+		else
+		{
+			System.out.print(num % 10);
+			reverse(num / 10);
+		}
 	}
 
 	public static void base2(int num)
 	{
-		/************************/
-      	/*                      */
-      	/* Your code goes here. */
-      	/*                      */
-		/************************/
+		if (num > 0)
+		{
+			int a = num % 2;
+			num = num / 2;
+
+			base2(num);
+
+			System.out.print(a + "" + num);
+		}
 	}
 
-	public static void printWithCommas(long number)
+	public static void printWithCommas(long num)
 	{
-		/************************/
-      	/*                      */
-      	/* Your code goes here. */
-      	/*                      */
-		/************************/
+		if (String.valueOf(num).length() <= 1)
+		{
+			return;
+		}
+
+		else
+		{
+			long res = num % 10;
+
+			System.out.print(res);
+
+			if (String.valueOf(res).length() % 3 == 0)
+			{
+				System.out.println(",");
+			}
+
+			printWithCommas(res);
+		}
 	}
 }
