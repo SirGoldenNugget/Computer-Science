@@ -149,25 +149,54 @@ public class Recur
 		}
 	}
 
+//	public static void printWithCommas(long num)
+//	{
+//		if (String.valueOf(num).length() <= 1)
+//		{
+//			System.out.print(num % 10);
+//		}
+//
+//		else
+//		{
+//			long i = num / 10;
+//			long j = num % 10;
+//
+//			int length = String.valueOf(i).length();
+//
+//			printWithCommas(i);
+//
+//			if (length % 3 == 0)
+//			{
+//				System.out.print(",");
+//			}
+//
+//			System.out.print(j);
+//		}
+//	}
+
 	public static void printWithCommas(long num)
 	{
-		if (String.valueOf(num).length() <= 1)
+		String str = String.valueOf(num);
+
+		if (str.length() <= 1)
 		{
+			System.out.print(str);
 			return;
 		}
 
 		else
 		{
-			long res = num % 10;
+			long j = Long.parseLong(str.substring(0, 1));
+			long i = Long.parseLong(str.substring(1));
 
-			System.out.print(res);
-
-			if (String.valueOf(res).length() % 3 == 0)
+			if (str.length() % 3 == 0)
 			{
-				System.out.println(",");
+				System.out.print(",");
 			}
 
-			printWithCommas(res);
+			System.out.print(j);
+
+			printWithCommas(i);
 		}
 	}
 }
