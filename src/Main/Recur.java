@@ -136,14 +136,16 @@ public class Recur
 
 	public static void base2(int num)
 	{
-		if (num > 0)
+		if (num < 2)
 		{
-			int a = num % 2;
-			num = num / 2;
+			System.out.print(num);
+		}
 
-			base2(num);
-
-			System.out.print(a + "" + num);
+		else
+		{
+			int i = num % 2;
+			base2(num / 2);
+			System.out.print(i);
 		}
 	}
 
