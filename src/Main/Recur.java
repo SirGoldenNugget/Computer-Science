@@ -111,12 +111,17 @@ public class Recur
 
 	public static boolean powerOfThree(int num)
 	{
-		/************************/
-	  	/*                      */
-	  	/* Your code goes here. */
-      	/*                      */
-		/************************/
-		return true;
+		if (num <= 5 && num == 3)
+		{
+			return true;
+		}
+
+		else if (num % 3 == 0)
+		{
+			return powerOfThree(num / 3);
+		}
+
+		return false;
 	}
 
 	public static void reverse(long num)
