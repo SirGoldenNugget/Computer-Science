@@ -83,13 +83,16 @@ public class SparseArray
 			}
 		}
 
-		for (SparseArrayEntry entry : entries)
+		numCols--;
+
+		for (int i = 0; i < entries.size(); ++i)
 		{
-			if (entry.getCol() == numCols - 1)
+			if (entries.get(i).getCol() >= numCols)
 			{
-				entry = new SparseArrayEntry(entry.getRow(), entry.getCol(), 0);
+				entries.remove(entries.get(i));
 			}
 		}
+
 	}
 	// There may be instance variables, constructors, and methods that are not shown.
 }
