@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a72de31-e98f-43d9-b367-0b93d8ba0ca5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main/FRQ2004.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/FRQ2004.java" afterPath="$PROJECT_DIR$/src/Main/FRQ2004.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,8 +69,8 @@
       <file leaf-file-name="FRQ2004.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/FRQ2004.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="361">
+              <caret line="90" column="24" lean-forward="true" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -453,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491581586679</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added FRQ 2004.">
+      <created>1492615877037</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1492615877037</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -499,7 +506,8 @@
     <MESSAGE value="Added DiverseArray" />
     <MESSAGE value="Added SparseArray." />
     <MESSAGE value="Adjusted SparseArray." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusted SparseArray." />
+    <MESSAGE value="Added FRQ 2004." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added FRQ 2004." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -801,8 +809,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/FRQ2004.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="361">
+          <caret line="90" column="24" lean-forward="true" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
